@@ -3,4 +3,7 @@ class Howtolist < ActiveRecord::Base
 
   has_many :steps
 
+  #validates :title, :prescence => true
+  #validates :description, :presence => true
+
 end
