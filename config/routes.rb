@@ -1,4 +1,6 @@
 Howto::Application.routes.draw do
+  root :to => "howtolists#index"
+
   resources :howtolists do
     resources :steps
   end

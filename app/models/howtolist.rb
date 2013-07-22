@@ -1,7 +1,9 @@
 class Howtolist < ActiveRecord::Base
-  attr_accessible :title
 
   has_many :steps
+
+  attr_accessible :title
+
 
   #validates :title, :prescence => true
   #validates :description, :presence => true

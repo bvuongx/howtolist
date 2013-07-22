@@ -8,7 +8,7 @@ require 'spec_helper'
 
   scenario "can create a step" do
     fill_in 'Step', :with => 'TextMate 2'
-    click_button 'Create Step'
+    click_button 'New Step'
     page.should have_content('Step has been created.')
 
     step = step.find_by_name("TextMate 2")

@@ -5,6 +5,16 @@
   <%= @howtolist.title %>
 </p>
 
-
 <%= link_to 'Edit', edit_howtolist_path(@howtolist) %> |
 <%= link_to 'Back', howtolists_path %>
+<%= link_to 'New Step', new_howtolist_step_path(@howtolist) %>
+
+<ul id='steps'>
+  <% @howtolist.steps.each do |step| %>
+    <li>
+      <%= step.title %>
+      <%= link_to step.description, [@howtolist, step] %>
+    </li>
+  <% end %>
+</ul>
+

@@ -11,12 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130719045819) do
+ActiveRecord::Schema.define(:version => 20130721053728) do
 
   create_table "howtolists", :force => true do |t|
     t.string   "title"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "steps", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "howtolist_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "steps", ["howtolist_id"], :name => "index_steps_on_howtolist_id"
 
 end
